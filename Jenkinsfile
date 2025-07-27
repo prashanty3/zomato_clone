@@ -19,7 +19,7 @@ pipeline {
 
         stage("Git Checkout") {
             steps {
-                git branch: 'main', url: 'https://github.com/prashanty3/zomato.git'
+                git branch: 'main', url: 'https://github.com/prashanty3/zomato_clone.git'
             }
         }
 
