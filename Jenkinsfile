@@ -55,15 +55,9 @@ pipeline {
             }
         }
 
-        stage("OWASP Dependency Scan") {
+        stage('OWASP FS SCAN') {
             steps {
-                // Update vulnerability DB
-                dependencyCheck additionalArguments: '--updateonly --disableYarnAudit --disableNodeAudit', odcInstallation: 'DP-Check'
-
-                // Perform scan
-                dependencyCheck additionalArguments: '--scan ./ --disableYarnAudit --disableNodeAudit --format XML --out reports/', odcInstallation: 'DP-Check'
-
-                // Publish report
+                dependencyCheck additionalArguments: '--scan ./ --disableYarnAudit --disableNodeAudit -n', odcInstallation: 'DP-Check'
                 dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
             }
         }
