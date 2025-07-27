@@ -8,7 +8,7 @@ let SearchBar = () => {
     return <div className={css.outerDiv}>
         <div className={css.srch1}>
             <div className={css.iconBox}><img className={css.icon} src={locationIcon} alt="location pointer" /></div>
-            <input type="text" placeholder="Place.." className={css.inpt} />
+            <input type="text" placeholder="Kanpur" className={css.inpt} />
             <div className={css.iconBox}><img className={css.downArrow} src={downArrow} alt="down arrow" /></div>
         </div>
         <hr className={css.hr} />
