@@ -55,6 +55,22 @@ pipeline {
             }
         }
 
+<<<<<<< HEAD
+=======
+        // stage("OWASP Dependency Scan") {
+        //     steps {
+        //         // Update vulnerability DB
+        //         dependencyCheck additionalArguments: '--updateonly --disableYarnAudit --disableNodeAudit', odcInstallation: 'DP-Check'
+
+        //         // Perform scan
+        //         dependencyCheck additionalArguments: '--scan ./ --disableYarnAudit --disableNodeAudit --format XML --out reports/', odcInstallation: 'DP-Check'
+
+        //         // Publish report
+        //         dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
+        //     }
+        // }
+
+>>>>>>> 6fe22c2 (change in package.json, Dockerfile, Jenkinsfile)
         stage("Trivy File Scan") {
             steps {
                 sh "trivy fs . > trivynew.txt"
