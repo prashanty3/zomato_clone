@@ -17,7 +17,7 @@ let HomePageBanner = () => {
             <img src={banner} alt="banner" className={css.bannerImg} />
             <div className={css.bannerTxt}>
                 <div className={css.title}>Tomato</div>
-                <div className={css.tag}>Discover the best food & drinks in <span className={css.bld}>Hyderabad</span></div>
+                <div className={css.tag}>Discover the best food & drinks in <span className={css.bld}>Kanpur</span></div>
                 <div className={css.searchbar}>
                     <SearchBar />
                 </div>
